@@ -13,7 +13,7 @@ class Visualizer(Atom):
     @staticmethod
     def render(_, input_sources: Iterable[Particle]) -> str:
         graph = Digraph()
-        input_output_mappings: dict[Particle, set[Particle]] = Output_Finder({Reserved_Property_Names.VALUE: input_sources, Reserved_Property_Names.INPUT_SOURCES: input_sources}).emit()
+        input_output_mappings: dict[Particle, set[Particle]] = Output_Finder({Reserved_Property_Names.VALUE: input_sources, Reserved_Property_Names.INPUT_SOURCE_PARTICLES: input_sources}).emit()
         for input_Particle in input_output_mappings.keys():
             graph.node(
                 name=(input_Particle_node_name := str(id(input_Particle))),

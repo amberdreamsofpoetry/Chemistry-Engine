@@ -17,6 +17,6 @@ class Output_Finder(Atom):
 
     # TODO: make helper arguments for value and inputs
     def __init__(self, properties: dict[str, Any] | None = None) -> None:
-        super().__init__(properties)
+        super().__init__(properties=properties)
         self.process = self.find_outputs_of_Particle
     

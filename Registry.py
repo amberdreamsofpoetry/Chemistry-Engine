@@ -1,13 +1,15 @@
 # Registry.py
 
 
-class Reserved_Property_Names:
+
+from enum import Enum
+
+
+
+class Reserved_Property_Names(str, Enum):
     VALUE = "value"
 
-    INPUT_SOURCES = "input_sources"
+    INPUT_SOURCE_PARTICLES = "input_source_Particles"
     PROCESS = "process"
 
     NAME = "name"
-
-    INPUT_RESOLVABLE = "input_Resolvable"
-    OUTPUT_RESOLVABLE = "output_Resolvable"
